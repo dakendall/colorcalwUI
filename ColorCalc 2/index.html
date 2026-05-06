@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- icon link -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Ovipet Color Calculator</h1>
+            <p>Calculate the difference between hex codes</p>
+            <div class="header-form"></div>
+            <form id="calc-form">
+                <div class="input-group">
+                    <div class="goal-container">
+                        <h2>Goal Color</h2>
+                        <div class="input-field">
+                            <span>Eyes: #</span>
+                            <input type="text" placeholder="XXXXXX" name="eyes" id="goal-eyes" />
+                            <small></small> <!-- error msg -->
+                        </div>
+                        <div class="input-field">
+                            <span>Body 1: #</span>
+                            <input type="text" placeholder="XXXXXX" name="body1" id="goal-body1" />
+                            <small></small>
+                        </div>
+                        <div class="input-field">
+                            <span>Body 2: #</span>
+                            <input type="text" placeholder="XXXXXX" name="body2" id="goal-body2" />
+                            <small></small>
+                        </div>
+                        <div class="input-field">
+                            <span>Extra 1: #</span>
+                            <input type="text" placeholder="XXXXXX" name="extra1" id="goal-extra1" />
+                            <small></small>
+                        </div>
+                        <div class="input-field">
+                            <span>Extra 2: #</span>
+                            <input type="text" placeholder="XXXXXX" name="extra2" id="goal-extra2" />
+                            <small></small>
+                        </div>
+                    </div>
+
+                    <div class="current-container">
+                        <h2>Current Color</h2>
+                        <div class="input-field">
+                            <span>Eyes: #</span>
+                            <input type="text" placeholder="XXXXXX" name="eyes" id="current-eyes" />
+                            <small></small>
+                        </div>
+                        <div class="input-field">
+                            <span>Body 1: #</span>
+                            <input type="text" placeholder="XXXXXX" name="body1" id="current-body1" />
+                            <small></small>
+                        </div>
+                        <div class="input-field">
+                            <span>Body 2: #</span>
+                            <input type="text" placeholder="XXXXXX" name="body2" id="current-body2" />
+                            <small></small>
+                        </div>
+                        <div class="input-field">
+                            <span>Extra 1: #</span>
+                            <input type="text" placeholder="XXXXXX" name="extra1" id="current-extra1" />
+                            <small></small>
+                        </div>
+                        <div class="input-field">
+                            <span>Extra 2: #</span>
+                            <input type="text" placeholder="XXXXXX" name="extra2" id="current-extra2" />
+                            <small></small>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="calculate">
+                    <div class="btn-content">
+                        <span>Calculate</span>
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                </button>
+            </form>
+
+            <div class="reset-container">
+                <button id="reset-btn">Reset</button>
+            </div>
+
+            <div class="results-container hidden" id="results">
+                <h2>Results</h2>
+                <div class="cpy-all-container">
+                    <button id="cpy-all">Copy All</button>
+                </div>
+                <div class="result-info">
+                    <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+                    <span class="result-title">Eyes: </span>
+                    <span class="result-value" id="eyes"></span> <!-- result value and copy button -->
+                </div>
+                <div class="result-info">
+                    <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+                    <span class="result-title">Body 1: </span>
+                    <span class="result-value" id="body1"></span>
+                </div>
+                <div class="result-info">
+                    <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+                    <span class="result-title">Body 2: </span>
+                    <span class="result-value" id="body2"></span>
+                </div>
+                <div class="result-info">
+                    <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+                    <span class="result-title">Extra 1: </span>
+                    <span class="result-value" id="extra1"></span>
+                </div>
+                <div class="result-info">
+                    <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+                    <span class="result-title">Extra 2: </span>
+                    <span class="result-value" id="extra2"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

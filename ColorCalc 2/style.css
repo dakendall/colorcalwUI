@@ -1,0 +1,276 @@
+* {
+    /* reset */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: #19daf9;
+    --primary-dark: #2cc1d8;
+    --text-light: white;
+    --bg-dark: #1a1a1a;
+    --bg-light: #474747;
+    --input-bg: #070763;
+    --border-radius: 10px;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-container {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 45px;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background-color: black;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-bottom: 25px;
+
+}
+
+.input-group h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group span {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    font-size: 1rem;
+}
+
+#goal-eyes,
+#current-eyes {
+    padding: 15px 15px 15px 70px;
+}
+
+input {
+    width: 100%;
+    padding: 15px 15px 15px 85px;
+    background-color: var(--input-bg);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: var(--text-light);
+    opacity: 0.5;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 20, 107, 0.2);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0 1000px #070763 inset;
+}
+
+small {
+    visibility: hidden;
+    position: absolute;
+    bottom: -16px;
+    padding-left: 5px;
+    left: 0;
+    font-size: 12px;
+}
+
+.input-field.error input {
+    border-color: #e74c3c;
+}
+
+.input-field.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+#calculate {
+    background-color: var(--primary-color);
+    color: var(--input-bg);
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 16px 30px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 20, 107, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.reset-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.cpy-all-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#reset-btn,
+#cpy-all {
+    background: none;
+    border: none;
+    color: var(--input-bg);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#reset-btn:hover,
+#cpy-all:hover {
+    color: var(--primary-color);
+}
+
+.results-container {
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 2px solid rgb(255, 255, 255, 0.1);
+}
+
+.results-container h2 {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.result-info {
+    width: 50%;
+    background-color: var(--input-bg);
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 15px 15px 15px;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.result-info:hover {
+    border-color: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 0 0 3px rgba(0, 20, 107, 0.2);
+}
+
+.result-info:hover .copy-btn {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.copy-btn {
+    color: var(--text-light);
+}
+
+.result-value {
+    color: var(--text-light);
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 1 .2rem;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 0.1 rem;
+        margin-top: 10px;
+    }
+
+    .header-form {
+        height: 185px;
+    }
+
+    .result-info {
+        width: 80%;
+    }
+}
